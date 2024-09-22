@@ -4,7 +4,7 @@ document.getElementById('button-login').addEventListener('click', function(event
     event.preventDefault();
     if(num === '018' && pass === '1234'){
         console.log("connected");
-        window.location.href = '../dashboard.html';
+        window.location.href = './dashboard.html';
     }
     else{
         alert("Incorrect Number or Password")

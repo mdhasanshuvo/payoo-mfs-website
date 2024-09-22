@@ -5,8 +5,7 @@ document.getElementById('button-add-money').addEventListener('click', function(e
     const pass = getInputFieldValueById('int-pass');
     
     if(pass === 1234){
-        const current = document.getElementById('initial').innerText;
-        const currentAmount = parseFloat(current);
+        const currentAmount = getTextValueByID('initial');
         const total = addAmount + currentAmount;
         document.getElementById('initial').innerText = total;
 
@@ -23,8 +22,7 @@ document.getElementById('button-cashOut-money').addEventListener('click', functi
     const pass = getInputFieldValueById('int-pass-cashOut');
     
     if(pass === 1234){
-        const current = document.getElementById('initial').innerText;
-        const currentAmount = parseFloat(current);
+        const currentAmount = getTextValueByID('initial');
         const total = currentAmount - cashOutAmount ;
         document.getElementById('initial').innerText = total;
 
