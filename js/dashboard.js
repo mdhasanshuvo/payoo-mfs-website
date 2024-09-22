@@ -1,11 +1,10 @@
 document.getElementById('button-add-money').addEventListener('click', function(event){
     event.preventDefault();
-    const addAmt = document.getElementById('int-ammount').value;
-    const addAmount = parseFloat(addAmt);
+    const addAmount = getInputFieldValueById('int-ammount');
 
-    const pass = document.getElementById('int-pass').value;
+    const pass = getInputFieldValueById('int-pass');
     
-    if(pass === '1234'){
+    if(pass === 1234){
         const current = document.getElementById('initial').innerText;
         const currentAmount = parseFloat(current);
         const total = addAmount + currentAmount;
@@ -19,12 +18,11 @@ document.getElementById('button-add-money').addEventListener('click', function(e
 
 document.getElementById('button-cashOut-money').addEventListener('click', function(event){
     event.preventDefault();
-    const addAmt = document.getElementById('int-cashOut').value;
-    const cashOutAmount = parseFloat(addAmt);
+    const cashOutAmount = getInputFieldValueById('int-cashOut');
 
-    const pass = document.getElementById('int-pass-cashOut').value;
+    const pass = getInputFieldValueById('int-pass-cashOut');
     
-    if(pass === '1234'){
+    if(pass === 1234){
         const current = document.getElementById('initial').innerText;
         const currentAmount = parseFloat(current);
         const total = currentAmount - cashOutAmount ;
