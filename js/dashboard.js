@@ -9,6 +9,9 @@ document.getElementById('button-add-money').addEventListener('click', function(e
         const total = addAmount + currentAmount;
         document.getElementById('initial').innerText = total;
 
+        const p = document.createElement('p');
+        p.innerText = `Added: ${addAmount} TK.   Balance: ${total}`;
+        document.getElementById('transContainer').appendChild(p);
     }
     else{
         alert("transection Failed. PLease try again");
@@ -26,20 +29,31 @@ document.getElementById('button-cashOut-money').addEventListener('click', functi
         const total = currentAmount - cashOutAmount ;
         document.getElementById('initial').innerText = total;
 
+        const div = document.createElement('div');
+        div.innerHTML = `
+            <h4>Cash Out</h4>
+            <p>Cash Out: ${cashOutAmount} TK.  Balance: ${total}</p>
+        `
+        document.getElementById('transContainer').appendChild(div);
+
     }
     else{
         alert("transection Failed. PLease try again");
     }
 })
 
+
+
 document.getElementById('cashOut').addEventListener('click', function(){
-    document.getElementById('addMoneyDiv').classList.add('hidden');
-    document.getElementById('cashOutDiv').classList.remove('hidden');
+    showSectionById('cashOutDiv');
 })
 
 document.getElementById('addMoney').addEventListener('click', function(){
-    document.getElementById('cashOutDiv').classList.add('hidden');
-    document.getElementById('addMoneyDiv').classList.remove('hidden');
+    showSectionById('addMoneyDiv');
+})
+
+document.getElementById('transButton').addEventListener('click', function(){
+    showSectionById('transactionDiv');
 })
 
 

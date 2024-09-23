@@ -11,3 +11,11 @@ function getTextValueByID(id) {
 
     return textNumber;
 }
+
+function showSectionById(id) {
+    document.getElementById('addMoneyDiv').classList.add('hidden');
+    document.getElementById('cashOutDiv').classList.add('hidden');
+    document.getElementById('transactionDiv').classList.add('hidden');
+
+    document.getElementById(id).classList.remove('hidden');
+}

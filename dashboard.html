@@ -26,10 +26,11 @@
                     </div>
                     <div class="divider"></div>
 
-                    <div>
+                    <div class="flex space-x-2">
                         <!-- user action button  -->
                         <button id="addMoney" class="btn btn-lg">Add money</button>
                         <button id="cashOut" class="btn btn-lg">Cash out</button>
+                        <button id="transButton" class="btn btn-lg">Transactions</button>
                     </div>
 
                     <div class="divider"></div>
@@ -80,7 +81,12 @@
                             </div>
                         </form>
                     </div>
-                    
+
+                    <!-- transaction -->
+                    <div id="transactionDiv" class="hidden">
+                        <div class="text-2xl">Transaction History</div>
+                        <div id="transContainer"></div>
+                    </div>
 
                 </div>
             </div>
